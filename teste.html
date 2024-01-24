@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Recados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("D:/Fitigames/Bioetica/Dashboard/fundo.png") center/cover no-repeat fixed; /* Substitua pelo caminho da sua imagem */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #recados {
+            max-width: 800px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: -450px; /* Ajuste este valor conforme necessário para mover os recados para cima */
+        }
+    </style>
+</head>
+<body>
+    <div id="recados"></div>
+    <script>
+        const recadosDiv = document.getElementById('recados');
+
+        function adicionarRecado(mensagem) {
+            const novoRecado = document.createElement('p');
+            novoRecado.textContent = mensagem;
+            recadosDiv.appendChild(novoRecado);
+        }
+
+        // Exemplo de uso:
+        adicionarRecado('Bem-vindo à nossa página de recados!');
+        adicionarRecado('Lembre-se de verificar as últimas atualizações.');
+    </script>
+</body>
+</html>
